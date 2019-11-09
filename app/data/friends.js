@@ -32,3 +32,77 @@ The modal should display both the name and picture of the closest match.
 
 
 */
+
+let users = [
+  {
+    "name":"User1",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ]
+  },
+  {
+    "name":"User2",
+    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "scores":[
+        2,
+        5,
+        3,
+        4,
+        5,
+        3,
+        2,
+        4,
+        3,
+        2
+      ]
+  }
+];
+
+let newUser = {
+  "name":"newUser",
+  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "scores":[
+      4,
+      3,
+      3,
+      2,
+      5,
+      1,
+      2,
+      3,
+      4,
+      2
+    ]
+};
+
+function compareScores (newUser) {
+  console.log(`New User: ${newUser.scores}`);
+  
+  users.forEach(element => {
+    let score = 0;
+    for (let i = 0; i < newUser.scores.length; i++) {
+      // at each [i], find greater number, subtract less from it, store the difference
+      let max = Math.max(element.scores[i], newUser.scores[i]);
+      let min = Math.min(element.scores[i], newUser.scores[i]);
+      let diff = max - min;
+      score += diff;    
+    };
+    let avg = score/10;
+    console.log(`average: ${avg}`);
+    
+    console.log("=======");
+    
+  });
+};
+
+compareScores(newUser);
