@@ -1,8 +1,9 @@
 const path = require("path");
 const express = require("express");
 
-const htmlRoutes = require("./app/routing/htmlRoutes");
-const apiRoutes = require("./app/routing/apiRoutes");
+let users = require("./data/friends");
+const htmlRoutes = require("./routing/htmlRoutes");
+const apiRoutes = require("./routing/apiRoutes");
 
 const app = express();
 let PORT = process.env.PORT || 3000;
@@ -10,12 +11,39 @@ let PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded( { extended:true } ));
 app.use(express.static("public"));
-
+ 
 
 htmlRoutes(app);
 // apiRoutes(app);
 
 app.listen(PORT, () => {
     console.log(`Server listening on PORT: ${PORT}`);
-
 });
+
+
+function compareScores(newUser) {
+    //push newUser to users array
+    let matchArr = [];
+  
+    users.forEach(element => {
+      let score = 0;
+      for (let i = 0; i < newUser.scores.length; i++) {
+        let diff = Math.abs(element.scores[i] - newUser.scores[i])
+        score += diff;
+      };
+      let compared = { name: element.name, score: score };
+      matchArr.push(compared);
+  
+    });
+  
+    let sortedUsers = matchArr.sort( (a, b) => a.score > b.score ? 1 : -1 );
+    console.table(sortedUsers);
+    //display sortedUsers[0] in modal
+  };
+  
+
+
+//   app.post("/api/friends", (request, response) => {
+//     let newUser = request.body;
+//     compareScores(newUser)
+//   });
