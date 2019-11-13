@@ -30,13 +30,11 @@ function compareScores(newUser) {
       let diff = Math.abs(element.scores[i] - newUser.scores[i])
       score += diff;
     };
-    let compared = { name: element.name, score: score };
+    let compared = { name: element.name, photo: element.photo, score: score };
     matchArr.push(compared);
-
   });
 
   let sortedUsers = matchArr.sort((a, b) => a.score > b.score ? 1 : -1);
-
   users.push(newUser);
   return sortedUsers[0];
 };

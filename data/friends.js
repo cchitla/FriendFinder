@@ -1,7 +1,7 @@
 let users = [
   {
     "name": "User1",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg",
     "scores": [
       2,
       5,
@@ -17,7 +17,7 @@ let users = [
   },
   {
     "name": "user3",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "scores": [
       4,
       3,
@@ -33,7 +33,7 @@ let users = [
   },
   {
     "name": "User2",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "scores": [
       5,
       1,

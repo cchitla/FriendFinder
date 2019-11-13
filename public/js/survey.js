@@ -19,7 +19,14 @@ $(document).ready(function () {
         $
             .post("/api/friends", newUser)
             .then(function(data) { 
-                console.log(data);           
+                console.table(data);
+                 
+                
+                $("#modalDisplay").html(`<p>Name: ${data.name}</p>
+                <p>Photo: <img src="${data.photo}"><img></p>
+                <p>Score: ${data.score}</p>`);
+
+                $('#modal').modal('show') 
             });
     });
 
