@@ -36,8 +36,13 @@ function compareScores(newUser) {
   });
 
   let sortedUsers = matchArr.sort((a, b) => a.score > b.score ? 1 : -1);
-  console.table(sortedUsers);
-  //display sortedUsers[0] in modal
 
   users.push(newUser);
+  return sortedUsers[0];
 };
+
+
+app.post("/api/friends", (request, response) => {
+  let matchedUser = compareScores(request.body);
+  response.json(matchedUser);
+});
