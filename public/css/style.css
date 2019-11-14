@@ -1,3 +1,7 @@
 .api-link {
     font-size: .8rem;
 }
+
+img {
+    max-width: 300px;
+}

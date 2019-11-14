@@ -1,7 +1,7 @@
 let users = [
   {
-    "name": "User1",
-    "photo": "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg",
+    "name": "Terminator",
+    "photo": "https://townsquare.media/site/295/files/2019/10/Terminator-Orion.jpg?w=980&q=75",
     "scores": [
       2,
       5,
@@ -16,8 +16,8 @@ let users = [
     ]
   },
   {
-    "name": "user3",
-    "photo": "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Robocop",
+    "photo": "https://i1.wp.com/mokueststudios.com/wp-content/uploads/2019/07/Robocop-movie-Peter-Weller-Cyborg-e1562739810732.jpg?resize=498%2C488&ssl=1",
     "scores": [
       4,
       3,
@@ -32,8 +32,8 @@ let users = [
     ]
   },
   {
-    "name": "User2",
-    "photo": "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "name": "Alien",
+    "photo": "https://www.thewrap.com/wp-content/uploads/2017/05/alien-1979.jpg",
     "scores": [
       5,
       1,
